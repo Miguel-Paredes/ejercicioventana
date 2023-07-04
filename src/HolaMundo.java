@@ -10,11 +10,12 @@ public class HolaMundo {
     private JTextField numero1;
     private JTextField numero2;
     int i=0;
-
+    float val1=0, val2=0, val3=0;
     public HolaMundo() {
         okButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                /*
                 //resultado.setText("Presionaste el boton OK");
                 i++;
                 //convierte un entero a string Integer.toString(i)
@@ -23,8 +24,13 @@ public class HolaMundo {
                 numero1.getText();
                 if (i==3){
                     resultado.setText("Has presionado el boton 3 veces");
-                    System.out.println("Has presionado el boton 3 veces");
-                }
+                    System.out.println("Has presionado el boton 3 veces");}*/
+                val1=Float.parseFloat(numero1.getText());
+                val2=Float.parseFloat(numero2.getText());
+                val3=val1/(val2*val2);
+                System.out.println(val3);
+                resultado.setText(Float.toString(val3));
+
             }
         });
     }
